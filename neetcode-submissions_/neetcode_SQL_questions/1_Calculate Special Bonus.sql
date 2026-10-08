@@ -1,3 +1,5 @@
+--Calculate Special Bonus
+
 SELECT EMPLOYEE_ID,
     CASE
     WHEN EMPLOYEE_ID%2 != 0 AND NAME NOT LIKE 'M%' THEN SALARY*1

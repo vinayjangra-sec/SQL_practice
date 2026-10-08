@@ -1,3 +1,5 @@
+-- Customers Who Bought A and B but Not C
+
 SELECT * FROM customers
 WHERE CUSTOMER_ID IN
   (SELECT customer_id FROM ORDERS

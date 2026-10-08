@@ -1,4 +1,7 @@
+-- Combine two tables
 -- Write your query below
+
+
 select p.first_name,p.Last_name,a.city,a.state from person as p
 full join address as a
 on a.person_id=p.person_id
