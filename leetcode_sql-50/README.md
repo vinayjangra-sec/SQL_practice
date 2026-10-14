@@ -498,3 +498,74 @@ Customer with id = 30 visited the mall once and did not make any transactions.
 Customer with id = 54 visited the mall three times. During 2 visits they did not make any transactions, and during one visit they made 3 transactions.
 Customer with id = 96 visited the mall once and did not make any transactions.
 As we can see, users with IDs 30 and 96 visited the mall one time without making any transactions. Also, user 54 visited the mall twice and did not make any transactions.
+
+<hr style="height:4px;border:none;color:#333;background-color:#333;" />
+
+# **Question No. 9: Rising Temperature**
+
+**Difficulty:** Easy
+
+### Table Schema: `Weather`
+
+
+| Column Name | Type |
+| ----- | ----- |
+| id | int |
+| recordDate | date |
+| temperature | int |
+
+id is the column with unique values for this table.
+There are no different rows with the same recordDate.
+This table contains information about the temperature on a certain day.
+ 
+
+### Problem Description
+
+Write a solution to find all dates' id with higher temperatures compared to its previous dates (yesterday).
+
+Return the result table in any order.
+
+The result format is in the following example.
+
+ 
+
+### Example 1:
+
+**Input:**
+
+Weather table:
+| id | recordDate | temperature |
+| ----- | ----- | ----- |
+| 1 | 2015-01-01 | 10 |
+| 2 | 2015-01-02 | 25 |
+| 3 | 2015-01-03 | 20 |
+| 4 | 2015-01-04 | 30 |
+
+
+**Output:**
+
+| id |
+| ----- |
+| 2 |
+| 4 |
+
+
+**Explanation:** In 2015-01-02, the temperature was higher than the previous day (10 -> 25).
+In 2015-01-04, the temperature was higher than the previous day (20 -> 30).
+
+
+test case :
+input
+| id | recordDate | temperature |
+| ----- | ----- | ----- |
+| -- | ---------- | ----------- |
+| 1 | 2000-12-14 | 3 |
+| 2 | 2000-12-16 | 5 |
+
+
+
+**Output:**
+
+| Id |
+| ----- |
+| -- |
