@@ -645,3 +645,75 @@ Activity table:
 Machine 0's average time is ((1.520 - 0.712) + (4.120 - 3.140)) / 2 = 0.894
 Machine 1's average time is ((1.550 - 0.550) + (1.420 - 0.430)) / 2 = 0.995
 Machine 2's average time is ((4.512 - 4.100) + (5.000 - 2.500)) / 2 = 1.456
+
+<hr style="height:4px;border:none;color:#333;background-color:#333;" />
+
+# **Question No. 11: Employee Bonus**
+
+**Difficulty:** Easy
+
+### Table Schema: `Employee`
+
+
+| Column Name | Type |
+| ----- | ----- |
+| empId | int |
+| name | varchar |
+| supervisor | int |
+| salary | int |
+
+empId is the column with unique values for this table.
+Each row of this table indicates the name and the ID of an employee in addition to their salary and the id of their manager.
+ 
+
+### Table Schema: `Bonus`
+
+
+| Column Name | Type |
+| ----- | ----- |
+| empId | int |
+| bonus | int |
+
+empId is the column of unique values for this table.
+empId is a foreign key (reference column) to empId from the Employee table.
+Each row of this table contains the id of an employee and their respective bonus.
+ 
+
+### Problem Description
+
+Write a solution to report the name and bonus amount of each employee who satisfies either of the following:
+
+The employee has a bonus less than 1000.
+The employee did not get any bonus.
+Return the result table in any order.
+
+The result format is in the following example.
+
+ 
+
+### Example 1:
+
+**Input:**
+
+Employee table:
+| empId | name | supervisor | salary |
+| ----- | ----- | ----- | ----- |
+| 3 | Brad | null | 4000 |
+| 1 | John | 3 | 1000 |
+| 2 | Dan | 3 | 2000 |
+| 4 | Thomas | 3 | 4000 |
+
+Bonus table:
+| empId | bonus |
+| ----- | ----- |
+| 2 | 500 |
+| 4 | 2000 |
+
+
+**Output:**
+
+| name | bonus |
+| ----- | ----- |
+| Brad | null |
+| John | null |
+| Dan | 500 |
